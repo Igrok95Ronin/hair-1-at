@@ -22,5 +22,13 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "- git init"
+  "description": "- git init",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Igrok95Ronin/hair-1-at.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Igrok95Ronin/hair-1-at/issues"
+  },
+  "homepage": "https://github.com/Igrok95Ronin/hair-1-at#readme"
 }
