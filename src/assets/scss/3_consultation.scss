@@ -1,0 +1,20 @@
+.consultation {
+    background-color: $mainColor;
+    color: #fff;
+    padding: 13px 0;
+}
+.consultation__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.consultation__dscr {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.consultation__wrapBtn {
+}
+.consultation__btn {
+  @include btn;
+}
