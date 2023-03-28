@@ -23,6 +23,9 @@
     @include btn;
 }
 .thickHair__right {
+    padding: 20px;
+    border: 1px solid $mainColor;
+    border-radius: 10px
 }
 .thickHair__title {
     @include h2Title;

@@ -1,0 +1,29 @@
+.lowPrices {
+    padding: 50px 0;
+}
+.lowPrices__box {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+.lowPrices__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+.lowPrices__txt {
+    font-size: 30px;
+}
+.lowPrices__btn {
+    @include btn;
+    padding: 10px 20px;
+}
+.lowPrices__right {
+}
+.lowPrices__ul {
+    font-size: 20px;
+    line-height: 35px;
+    font-weight: 700;
+    padding: 0;
+}
