@@ -14,10 +14,7 @@
 .mainFon__wrapper {
 }
 .mainFon__title {
-    font-weight: 600;
-    color: #0078c8;
-    font-size: clamp(24px,5vw,32px);
-    margin: 20px 0;
+    @include h2Title;
 }
 .mainFon__ul {
     font-size: 25px;
