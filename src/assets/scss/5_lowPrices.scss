@@ -1,10 +1,13 @@
 .lowPrices {
-    padding: 50px 0;
+    padding: 25px 0;
 }
 .lowPrices__box {
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 20px;
+    padding: 20px;
+    border: 1px solid $mainColor;
+    border-radius: 10px
 }
 .lowPrices__left {
     display: flex;
@@ -13,7 +16,7 @@
     align-items: start;
 }
 .lowPrices__txt {
-    font-size: 30px;
+    font-size: clamp(22px,5vw,30px);
 }
 .lowPrices__btn {
     @include btn;

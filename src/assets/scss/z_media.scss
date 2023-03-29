@@ -1,0 +1,29 @@
+@media(max-width: 767px) {
+    .mainFon__box {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .thickHair__box {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .lowPrices__box {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .freeOffer__box {
+        grid-template-columns: 1fr;
+    }
+}
+@media(max-width: 550px) {
+    .mainFon__left {
+        flex-direction: column;
+    }
+    .mainFon__box {
+        padding: 0 0 10px;
+    }
+    .consultation__box {
+        gap: 20px;
+        flex-direction: column;
+    }
+}

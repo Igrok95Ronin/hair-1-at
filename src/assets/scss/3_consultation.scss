@@ -9,7 +9,7 @@
     justify-content: space-between;
 }
 .consultation__dscr {
-    font-size: 22px;
+    font-size: clamp(19px,5vw,22px);
     font-weight: 700;
     margin-bottom: 0;
 }
