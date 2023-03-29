@@ -27,3 +27,11 @@
         flex-direction: column;
     }
 }
+@media(max-width: 425px) {
+    footer{
+        margin-bottom: 65px;
+    }
+    .btnFixed{
+        display: block;
+    }
+}
