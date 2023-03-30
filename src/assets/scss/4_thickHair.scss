@@ -7,11 +7,10 @@
     gap: 20px;
 }
 .thickHair__left {
+}
+.thickHair__leftInner{
     background-color: $mainColor;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     border-radius: 10px
 }
 .forms__title {

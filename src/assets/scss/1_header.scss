@@ -5,8 +5,18 @@
     padding: 5px 0;
 }
 .header__box {
+
 }
 .header__title {
     font-weight: 700;
     font-size: clamp(32px,5vw,60px);
 }
+.header___gifWrapper{
+    max-width: 100%;
+    max-height: 100%;
+}
+.header___gif{
+    width: 245px;
+    height: 150px;
+}
+//202 123

@@ -7,7 +7,7 @@
 }
 .mainFon__left {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     gap: 20px;
 }
@@ -25,14 +25,14 @@
 .mainFon__wrapperCircle {
     background-color: #b92c5d;
     color: #fff;
-    font-size: 23px;
+    font-size: 22px;
     font-weight: 700;
     text-align: center;
     margin: 0;
     border-radius: 50%;
-    padding: 38px 20px;
-    width: 158px;
-    height: 157px;
+    padding: 38px 18px;
+    width: 165px;
+    height: 165px;
 }
 .mainFon__right {
     max-width: 100%;

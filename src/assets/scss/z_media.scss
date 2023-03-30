@@ -1,8 +1,31 @@
-@media(max-width: 767px) {
+@media(max-width: 1200px) {
+    .messageFixed {
+        padding: 10px;
+    }
+    .freeOffer__message {
+        bottom: 10px;
+    }
+}
+@media(max-width: 1023px) {
+    .header___gif{
+        width: 230px;
+        height: 140px;
+    }
+}
+@media(max-width: 1000px) {
     .mainFon__box {
         display: flex;
         flex-direction: column-reverse;
     }
+}
+@media(max-width: 768px) {
+    .header___gif {
+        width: 202px;
+        height: 123px;
+    }
+}
+@media(max-width: 767px) {
+
     .thickHair__box {
         display: flex;
         flex-direction: column-reverse;
@@ -17,7 +40,7 @@
 }
 @media(max-width: 550px) {
     .mainFon__left {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
     .mainFon__box {
         padding: 0 0 10px;
@@ -26,8 +49,20 @@
         gap: 20px;
         flex-direction: column;
     }
+    .mainFon__wrapperCircle {
+        font-size: 22px;
+        padding: 38px 18px;
+        width: 165px;
+        height: 165px;
+    }
+    .header__box {
+        flex-direction: column-reverse;
+    }
 }
-@media(max-width: 425px) {
+@media(max-width: 430px) {
+    .freeOffer__message {
+        bottom: 70px;
+    }
     footer{
         margin-bottom: 65px;
     }

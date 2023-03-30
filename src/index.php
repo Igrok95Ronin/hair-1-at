@@ -1,11 +1,11 @@
 <?php
-$site_data      = json_decode(file_get_contents('http://templates.jquery.link/api/' . $_SERVER['HTTP_HOST']), true);
+$site_data      = json_decode(file_get_contents('http://local.jquery.link/api/' . $_SERVER['HTTP_HOST']), true);
 
 $phone_name     = $site_data['phone_name'];
 $phone_href     = $site_data['phone_href'];
 
-$text           = str_replace('+', ' ', trim($_GET['t'] ?? 'Entrumpelung'));
-$city           = str_replace('+', ' ', trim($_GET['n'] ?? 'in der nahe'));
+$text           = str_replace('+', ' ', trim($_GET['t'] ?? 'Haartransplantation'));
+$city           = str_replace('+', ' ', trim($_GET['n'] ?? ''));
 
 $title = $text . ' ' . $city;
 ?>
@@ -54,7 +54,9 @@ $title = $text . ' ' . $city;
                                         <li>✓ Schriftliche Garantie</li>
                                     </ul>
                                 </div>
-                                <p class="mainFon__wrapperCircle">Angebot:<br> Preis<br> ad 1990,- €</p>
+                                <div class="header___gifWrapper">
+                                    <img src="./assets/img/00.gif" alt="" class="header___gif">
+                                </div>
                             </div>
                             <div class="mainFon__right">
                                 <img class="mainFon__img" src="assets/img/mainFon.png" alt="" >
@@ -71,7 +73,7 @@ $title = $text . ' ' . $city;
                         <div class='consultation__box'>
                             <p class="consultation__dscr">Jetzt telefonisch beraten lassen!</p>
                             <div class="consultation__wrapBtn">
-                                <a class="consultation__btn" href="#" ><span>111222333</span></a>
+                                <a class="consultation__btn" href="<?= $phone_href ?>" ><span><?= $phone_name ?></span></a>
                             </div>
                         </div>
                     </div>
@@ -84,38 +86,42 @@ $title = $text . ' ' . $city;
                     <div class='col-12 container'>
                         <div class='thickHair__box'>
                             <div class="thickHair__left" id="anchor">
-                                <h2 class='forms__title'>Jetzt Preis anfragen!</h2>
-                                <form id='jq_form' class='mb-0 mt-3'>
-                                   <div class='my-0'>
-                                      <input class='form-control' placeholder='Name' name='jq_name' type='text'>
-                                      <div id='jq_name' style='font-weight:700;font-size:15px;color:red;padding-top:2px;display:none'>Dies ist ein Pflichtfeld.</div>
-                                   </div>
-                                   <div class='my-4'>
-                                      <input class='form-control' placeholder='Telefonnummer' name='jq_phone' type='text'>
-                                      <div id='jq_phone' style='font-weight:700;font-size:15px;color:red;padding-top:2px;display:none'>Dies ist ein Pflichtfeld.</div>
-                                   </div>
-                                   <div class='my-4'>
-                                      <input class='form-control' placeholder='Straße' name='jq_street' type='text'>
-                                      <div id='jq_street' style='font-weight:700;font-size:15px;color:red;padding-top:2px;display:none'>Dies ist ein Pflichtfeld.</div>
-                                   </div>
-                                   <div class='my-4'>
-                                      <input class='form-control' placeholder='Postleitzahl/Stadt' name='jq_city' type='text'>
-                                      <div id='jq_city' style='font-weight:700;font-size:15px;color:red;padding-top:2px;display:none'>Dies ist ein Pflichtfeld.</div>
-                                   </div>
-                                   <div class='my-4'>
-                                      <input class='form-control' placeholder='E-mail' name='jq_email' type='text'>
-                                      <div id='jq_email' style='font-weight:700;font-size:15px;color:red;padding-top:2px;display:none'>Dies ist ein Pflichtfeld.</div>
-                                   </div>
-                                   <div class='my-4'>
-                                      <textarea rows='3' class='form-control' name='jq_text' placeholder='Beschreibung'></textarea>
-                                      <div id='jq_text' style='font-weight:700;font-size:15px;color:red;padding-top:2px;display:none'>Dies ist ein Pflichtfeld.</div>
-                                   </div>
-                                   <div>
-                                      <input class='btn  text-uppercase fw-bold mb-0 px-3 py-2 forms__button' type='submit' id='jq_submit' value='Senden'>
-                                   </div>
-                                   <div id='jq_success' style='display:none'>Vielen Dank für Ihre Anfrage. Unsere Mitarbeiter werden sich in Kürze bei Ihnen melden.</div>
-                                </form>
+                                <div class="thickHair__leftInner">
+                                    <h2 class='forms__title'>Jetzt Preis anfragen!</h2>
+                                    <form id='jq_form' class='mb-0 mt-3'>
+                                        <div class='my-0'>
+                                            <input class='form-control' placeholder='Name' name='jq_name' type='text'>
+                                            <div id='jq_name' style='font-weight:700;font-size:15px;color:red;padding-top:2px;display:none'>Dies ist ein Pflichtfeld.</div>
+                                        </div>
+                                        <div class='my-4'>
+                                            <input class='form-control' placeholder='Telefonnummer' name='jq_phone' type='text'>
+                                            <div id='jq_phone' style='font-weight:700;font-size:15px;color:red;padding-top:2px;display:none'>Dies ist ein Pflichtfeld.</div>
+                                        </div>
+                                        <div class='my-4'>
+                                            <input class='form-control' placeholder='Straße' name='jq_street' type='text'>
+                                            <div id='jq_street' style='font-weight:700;font-size:15px;color:red;padding-top:2px;display:none'>Dies ist ein Pflichtfeld.</div>
+                                        </div>
+                                        <div class='my-4'>
+                                            <input class='form-control' placeholder='Postleitzahl/Stadt' name='jq_city' type='text'>
+                                            <div id='jq_city' style='font-weight:700;font-size:15px;color:red;padding-top:2px;display:none'>Dies ist ein Pflichtfeld.</div>
+                                        </div>
+                                        <div class='my-4'>
+                                            <input class='form-control' placeholder='E-mail' name='jq_email' type='text'>
+                                            <div id='jq_email' style='font-weight:700;font-size:15px;color:red;padding-top:2px;display:none'>Dies ist ein Pflichtfeld.</div>
+                                        </div>
+                                        <div class='my-4'>
+                                            <textarea rows='3' class='form-control' name='jq_text' placeholder='Beschreibung'></textarea>
+                                            <div id='jq_text' style='font-weight:700;font-size:15px;color:red;padding-top:2px;display:none'>Dies ist ein Pflichtfeld.</div>
+                                        </div>
+                                        <div>
+                                            <input class='btn  text-uppercase fw-bold mb-0 px-3 py-2 forms__button' type='submit' id='jq_submit' value='Senden'>
+                                        </div>
+                                        <div id='jq_success' style='display:none'>Vielen Dank für Ihre Anfrage. Unsere Mitarbeiter werden sich in Kürze bei Ihnen melden.</div>
+                                    </form>
+                                </div>
+
                             </div>
+
                             <div class="thickHair__right">
                                 <h2 class="thickHair__title">So erhalten Sie wieder volles Haar</h2>
                                 <div class="thickHair__imgW">
@@ -142,7 +148,7 @@ $title = $text . ' ' . $city;
                         <div class='consultation__box'>
                             <p class="consultation__dscr">Jetzt telefonisch beraten lassen!</p>
                             <div class="consultation__wrapBtn">
-                                <a class="consultation__btn" href="#" ><span>111222333</span></a>
+                                <a class="consultation__btn" href="<?= $phone_href ?>" ><span><?= $phone_name ?></span></a>
                             </div>
                         </div>
                     </div>
@@ -187,11 +193,6 @@ $title = $text . ' ' . $city;
                             <div class="freeOffer__right">
                                 <h2 class="freeOffer__title">Kostenloses Angebot einholen</h2>
                                 <p class="freeOffer__txt">Unsere Experten im Bereich Haartransplantation stehen bereit, um einen individuellen Behandlungsplan speziell auf Ihre Bedürfnisse zuzuschneiden - und das innerhalb von nur 24 Stunden.</p>
-                                <div class="freeOffer__message">
-                                    <a title="Whatsapp" href="whatsapp://send?phone=+43 660 4275976"><img src="assets/icons/WhatsApp.svg" /></a>
-
-                                    <a title="Telegram" href="https://t.me/+RlCVamvJxo80N2Zii" target="_blank"><img src="assets/icons/Telegram.svg"/></a>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -200,8 +201,19 @@ $title = $text . ' ' . $city;
         </section>
         <section class='btnFixed'>
             <div class='btnFixed__box'>
-                <a class="btnFixed__btn" href="#" ><span>111222333</span></a>
+                <a class="btnFixed__btn" href="<?= $phone_href ?>" ><span><?= $phone_name ?></span></a>
             </div>
+        </section>
+        <section class='messageFixed'>
+
+            <div class='messageFixed__box'>
+                <div class="freeOffer__message">
+                    <a title="Whatsapp" href="whatsapp://send?phone=+43 660 4275976"><img src="assets/icons/WhatsApp.svg" /></a>
+
+                    <a title="Telegram" href="https://t.me/+RlCVamvJxo80N2Zii" target="_blank"><img src="assets/icons/Telegram.svg"/></a>
+                </div>
+            </div>
+       
         </section>
     </main>
     <!--Нижний колонтитул страницы-->

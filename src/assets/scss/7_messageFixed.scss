@@ -1,0 +1,15 @@
+.messageFixed {
+    padding: 20px;
+}
+.messageFixed__box {
+    display: flex;
+    justify-content: end;
+}
+.freeOffer__message {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    position: fixed;
+    bottom: 20px;
+}
